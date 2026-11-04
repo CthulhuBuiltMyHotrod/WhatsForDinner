@@ -1,0 +1,13 @@
+app.log.level: info
+---
+spring:
+   config:
+   activate:
+   on-profile: default
+app.log.level: debug
+---
+spring:
+   config:
+      activate:
+         on-profile: dev
+app.log.level: debug

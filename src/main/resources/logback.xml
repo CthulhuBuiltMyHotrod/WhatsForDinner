@@ -1,0 +1,25 @@
+<configuration>
+    <appender name="" class="">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+            %black%(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] [%yellow(%logger{36}.%M)]: %msg%n%throwable
+            </pattern>
+        </layout>
+    </appender>
+
+    <logger name="org.apache" level="error" additivity="false">
+        <appender-ref ref="Console"/>
+    </logger>
+
+    <logger name="org.springframework" level="debug" additivity="false">
+        <appender-ref ref="Console"/>
+    </logger>
+
+    <logger name="org.rlyeh" level="${LOG_LEVEL:-debug}" additivity="false">
+        <appender-ref ref="Console"/>
+    </logger>
+
+
+
+
+</configuration>
